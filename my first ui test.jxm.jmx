@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.1">
+<hashTree>
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+<stringProp name="TestPlan.comments"></stringProp>
+<boolProp name="TestPlan.functional_mode">false</boolProp>
+<boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+<elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+<collectionProp name="Arguments.arguments" />
+</elementProp>
+<stringProp name="TestPlan.user_define_classpath"></stringProp>
+</TestPlan>
+<hashTree>
+<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+<elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</elementProp>
+<stringProp name="ThreadGroup.num_threads">1</stringProp>
+<stringProp name="ThreadGroup.ramp_time">1</stringProp>
+<longProp name="ThreadGroup.start_time">1281132211000</longProp>
+<longProp name="ThreadGroup.end_time">1281132211000</longProp>
+<boolProp name="ThreadGroup.scheduler">false</boolProp>
+<stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+<stringProp name="ThreadGroup.duration"></stringProp>
+<stringProp name="ThreadGroup.delay"></stringProp>
+</ThreadGroup>
+<hashTree>
+<CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+<collectionProp name="CookieManager.cookies" />
+<boolProp name="CookieManager.clearEachIteration">false</boolProp>
+<stringProp name="CookieManager.policy">rfc2109</stringProp>
+</CookieManager>
+<hashTree />
+<Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+<collectionProp name="Arguments.arguments">
+<elementProp name="VIEWSTATE" elementType="Argument">
+<stringProp name="Argument.name">VIEWSTATE</stringProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+</elementProp>
+<elementProp name="jsessionid" elementType="Argument">
+<stringProp name="Argument.name">jsessionid</stringProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+</elementProp>
+</collectionProp>
+</Arguments>
+<hashTree />
+<HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+<collectionProp name="HeaderManager.headers">
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">User-Agent</stringProp>
+<stringProp xml:space="preserve" name="Header.value">Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko</stringProp>
+</elementProp>
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">Accept</stringProp>
+<stringProp xml:space="preserve" name="Header.value">image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*</stringProp>
+</elementProp>
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">Accept-Language</stringProp>
+<stringProp xml:space="preserve" name="Header.value">en-NG,en-US;q=0.7,en;q=0.3</stringProp>
+</elementProp>
+</collectionProp>
+</HeaderManager>
+<hashTree />
+<LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Step 1" enabled="true">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</LoopController>
+<hashTree>
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.eclipse.org/downloads/download.php">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.eclipse.org/downloads/download.php<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="file">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">/oomph/epp/2022-06/R/eclipse-inst-jre-win64.exe</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">file</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="mirror_id">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">272</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">mirror_id</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/downloads/download.php</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://ftp.osuosl.org/pub/eclipse/oomph/epp/2022-06/R/eclipse-inst-jre-win64.exe">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://ftp.osuosl.org/pub/eclipse/oomph/epp/2022-06/R/eclipse-inst-jre-win64.exe<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">ftp.osuosl.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/pub/eclipse/oomph/epp/2022-06/R/eclipse-inst-jre-win64.exe</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.eclipse.org/projects/">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.eclipse.org/projects/<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/projects/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.eclipse.org/org/workinggroups/">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.eclipse.org/org/workinggroups/<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/org/workinggroups/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.eclipse.org/membership/">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.eclipse.org/membership/<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/membership/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://newsroom.eclipse.org/api/featured_story">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://newsroom.eclipse.org/api/featured_story<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="parameters[publish_to]">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">eclipse_org</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">parameters[publish_to]</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">newsroom.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/featured_story</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://accounts.eclipse.org/contact/membership">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://accounts.eclipse.org/contact/membership<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">accounts.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/contact/membership</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://newsroom.eclipse.org/api/featured_story">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://newsroom.eclipse.org/api/featured_story<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="parameters[publish_to]">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">eclipse_org</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">parameters[publish_to]</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">newsroom.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/featured_story</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://js.hsforms.net/forms-next/shell-recaptcha">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://js.hsforms.net/forms-next/shell-recaptcha<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">js.hsforms.net</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/forms-next/shell-recaptcha</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.google.com/recaptcha/enterprise/anchor">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.google.com/recaptcha/enterprise/anchor<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="ar">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ar</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="k">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">6Ld_ad8ZAAAAAAqr0ePo1dUfAi0m4KPkCMQYwPPm</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">k</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="co">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">aHR0cHM6Ly93d3cuZWNsaXBzZS5vcmc6NDQz</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">co</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="hl">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">en</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">hl</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="v">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">gWN_U6xTIPevg0vuq7g1hct0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">v</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="size">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">invisible</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">size</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="badge">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">inline</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">badge</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cb">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">bmbn60if6s6b</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cb</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/recaptcha/enterprise/anchor</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.google.com/recaptcha/enterprise/bframe">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.google.com/recaptcha/enterprise/bframe<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="hl">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">en</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">hl</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="v">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">gWN_U6xTIPevg0vuq7g1hct0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">v</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="k">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">6Ld_ad8ZAAAAAAqr0ePo1dUfAi0m4KPkCMQYwPPm</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">k</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/recaptcha/enterprise/bframe</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.eclipse.org/">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.eclipse.org/<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://projects.eclipse.org/api/projects/iot_kura">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://projects.eclipse.org/api/projects/iot_kura<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">projects.eclipse.org</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/projects/iot_kura</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+</hashTree>
+</hashTree>
+</hashTree>
+</hashTree>
+</jmeterTestPlan>
