@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Pyolite",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "project tittle= My Jupyter Notebook on IBM Watson Studio",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "name=innocent efe akpoyibo\ndesire occupation= data scientist",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "i am interested in data science because, i love working/playing with data and also want to always provide solutions to issue by using data science to do that.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "in cell 5 my code is supposed to give me an output of 20 by printing out four*five",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "four=4\nfive=5\nprint(four*five)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "20\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "blocked quotes\n> isaac followed her through many of the beautiful buildings in her new estate.\n\nlink\nMy favorite search engine is [Duck Duck Go](https://duckduckgo.com).\n\nimake\nMy favorite search machine is [Duck Duck Go](https://duckduckgo.com).\n",
+      "metadata": {}
+    }
+  ]
+}
